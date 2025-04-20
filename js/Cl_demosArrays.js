@@ -1,9 +1,6 @@
 export default class Cl_demosArrays {
 
     ejemploCreacion() {
-        let numeros = [1, 2, 3, 4, 5];
-        let booleanos = [true, false, true];
-
         let strings = ["Buenos", "dias"];
         let libros = [
             { nombre: "Veronica decide morir", paginas: 19 },
@@ -128,5 +125,9 @@ export default class Cl_demosArrays {
             electrodomesticos = ${JSON.stringify(electrodomesticos)}
             El electrodomestico eliminado fue ${JSON.stringify(ultimoElectrodomestico)}
             `);
+    }
+
+    ejemploShift(){
+        
     }
 }
