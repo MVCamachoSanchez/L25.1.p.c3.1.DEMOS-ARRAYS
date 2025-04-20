@@ -17,6 +17,12 @@ export default class Cl_principal {
         D. Ejemplo push<br>
         E. Ejemplo unshift<br>
         F. Ejemplo pop<br>
+        G. Ejemplo shift<br>
+        H. Ejemplo splice<br>
+        I. Ejemplo map()-1- <br>
+        J. Ejemplo map()-2- <br>
+        K. Ejemplo con ciclo tradicionales<br>
+        L. Ejemplo con forEach<br> 
         `
     }
 
@@ -42,6 +48,26 @@ export default class Cl_principal {
             case "F":
                 this.demos.ejemploPop();
                 break;
+            case "G":
+                this.demos.ejemploShift();
+                break;
+            case "H":
+                this.demos.ejemploSplice();
+                break;
+            case "I":
+                this.demos.metodoMap1();
+                break;
+            case "J":
+                this.demos.metodoMap2();
+                break;
+            case "K":
+                this.demos.ciclosTradicionales();
+                break;
+            case "L":
+                this.demos.metodoForEach();
+                break;
+            default:
+                alert(`Opción no disponible`);
         }
     }
 }

@@ -3,9 +3,9 @@ export default class Cl_demosArrays {
     ejemploCreacion() {
         let strings = ["Buenos", "dias"];
         let libros = [
-            { nombre: "Veronica decide morir", paginas: 19 },
-            { nombre: "Crepusculo", paginas: 20 },
-            { nombre: "Padre rico, Padre pobre", paginas: 17 },
+            { nombre: "Veronika Decide Morir", paginas: 240 },
+            { nombre: "Crepúsculo", paginas: 512 },
+            { nombre: "Padre Rico, Padre Pobre", paginas: 320 },
         ];
 
         alert(`
@@ -66,9 +66,9 @@ export default class Cl_demosArrays {
             `);
         decimales.push(3.5);
         alert(`
-                ===> Despues de decimales.push(3.5):
-                decimales = ${decimales}
-                `);
+            ===> Despues de decimales.push(3.5):
+            decimales = ${decimales}
+            `);
         decimales.push(4.5, 6.5)
         alert(`
             ===> Despues de decimales.push(4.5, 6.5)
@@ -104,10 +104,10 @@ export default class Cl_demosArrays {
             `);
         let ultimoVaso = vasos.pop();
         alert(`
-                ===> Despues de vasos.pop()
-                vasos = ${vasos}
-                El ultimo vaso fue ${ultimoVaso}
-                `);
+            ===> Despues de vasos.pop()
+            vasos = ${vasos}
+            El ultimo vaso fue ${ultimoVaso}
+            `);
 
         let electrodomesticos = [
             { electrodomestico: "Nevera", marca: "Condesa" },
@@ -127,7 +127,123 @@ export default class Cl_demosArrays {
             `);
     }
 
-    ejemploShift(){
-        
+    ejemploShift() {
+        let libros = [
+            { nombre: "Veronica Decide Morir", paginas: 240 },
+            { nombre: "Crepusculo", paginas: 512 },
+            { nombre: "Padrre Rico, Padre Pobre", paginas: 320 },
+        ];
+        alert(`
+            ===> Array de libros:
+            Antes del shift
+            libros = ${JSON.stringify(libros)}
+            `);
+        let primerLibro = libros.shift();
+        alert(`
+            ===> Despues del shift:
+            libros = ${JSON.stringify(libros)}
+            El libro eliminado  fue: ${JSON.stringify(primerLibro)}
+            `);
+    }
+
+    ejemploSplice() {
+        //Array de pinturas de uñas 
+        let pinturasUñas = [
+            { marca: "Valmy", color: "Azul" },
+            { marca: "Revlon", color: "Vino  tinto" },
+            { marca: "Masglo", color: "Blanco" },
+            { marca: "Lay Pro", color: "Tranparente" },
+        ];
+        alert(`
+            ===> Array de objetos (pinturas de uñas):
+            Antes del splice:
+            pinturasUñas = ${JSON.stringify(pinturasUñas)}
+            `);
+        let eliminados = pinturasUñas.splice(1, 2, { marca: "Valmy", color: "negro" });
+        alert(`
+            ===> Luego del splice:
+            pinturasUñas = ${JSON.stringify(pinturasUñas)}
+            Elemntos eliminados: ${JSON.stringify(eliminados)}
+            `);
+    }
+
+    metodoMap1() {
+        //Ejemplo con objetos
+        const perros = [
+            { raza: "Pincher", color: "marron" },
+            { raza: "Rottweiler", color: "negro" },
+            { raza: "Cocker", color: "blanco" },
+        ];
+        const raza = perros.map((perros) => perros.raza);
+        alert(`Ejemplo con objetos:
+            perros = ${JSON.stringify(perros)}
+            raza: ${raza}
+            `);
+    }
+
+    metodoMap2() {
+        const viveres = [
+            { vivere: "Pasta", cantidadPaquetes: 2 },
+            { vivere: "Arroz", cantidadPaquetes: 3 },
+            { vivere: "Harina", cantidadPaquetes: 4 },
+        ];
+        const viveresConCantidadIncrementada = viveres.map((viveres) => ({
+            ...viveres,
+            cantidadPaquetes: viveres.cantidadPaquetes + 1,
+        })
+        );
+        alert(`
+            ===> Ejemplo metodo map()
+            viveres = ${JSON.stringify(viveres)}
+            viveresConCantidadIncrementada = ${JSON.stringify(viveresConCantidadIncrementada)}
+        `);
+    }
+
+    ciclosTradicionales() {
+        //Ciclo for
+        let vasos = ["copa", "taza", "vaso largo"];
+        //Usamos un  bucle for para recorrer el array
+        for (let i = 0; i < vasos.length; i++) {
+            alert(`
+                CICLO for: vasos[${i}] = ${vasos[i]}
+                `);
+        }
+
+        //Ciclo while
+        let utenciliosCocina = ["cuchara", "tenedor", "cuchillo"];
+        let i = 0;
+        while (i < utenciliosCocina.length) {
+            alert(`
+                CICLO while: utenciliosCocina[${i}] = ${utenciliosCocina[i]}
+            `);
+            i++;
+        }
+
+        //Ciclo do-while
+        let array = ["copa", "taza", "vaso largo"];
+        i = 0;
+        do {
+            alert(`
+                CICLO  do-while: array[${i}] = ${array[i]}
+                `);
+            i++;
+        } while (i < array.length);
+    }
+
+    metodoForEach() {
+        //Macardores de colores
+        const macradoresColores = ["azul", "morado", "rosado", "verde", "amarillo"];
+        macradoresColores.forEach(function (item) {
+            alert(`
+                Marcadores de colores:
+                Recorrido con función tradicional: ${item}`);
+        });
+
+        //Using arrow funtion
+        macradoresColores.forEach((item) =>
+            alert(`
+            Marcadores de colores:    
+            Recorrido con función flecha: ${item}`)
+        );
     }
 }
