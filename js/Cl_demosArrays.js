@@ -78,20 +78,20 @@ export default class Cl_demosArrays {
 
     ejemploUnshift() {
 
-        let utenciliosCocina = ["cuchara", "tenedor", "cuchillo"];
+        let utensiliosCocina = ["cuchara", "tenedor", "cuchillo"];
         alert(`
             ===> Antes del unshift:
-            utenciliosCocina = ${utenciliosCocina}
+            utenciliosCocina = ${utensiliosCocina}
             `);
-        utenciliosCocina.unshift("espatula");
+        utensiliosCocina.unshift("espatula");
         alert(`
             ===> Despues del utenciliosCocina.unshift("espatula"):
-            utenciliosCocina = ${utenciliosCocina}
+            utenciliosCocina = ${utensiliosCocina}
             `);
-        utenciliosCocina.unshift("sarten", "olla");
+        utensiliosCocina.unshift("sarten", "olla");
         alert(`
             ===> Despues del utenciliosCocina.unshift("sarten", "olla")
-            utenciliosCocina = ${utenciliosCocina}
+            utenciliosCocina = ${utensiliosCocina}
             `);
     }
 
@@ -210,11 +210,11 @@ export default class Cl_demosArrays {
         }
 
         //Ciclo while
-        let utenciliosCocina = ["cuchara", "tenedor", "cuchillo"];
+        let utensiliosCocina = ["cuchara", "tenedor", "cuchillo"];
         let i = 0;
-        while (i < utenciliosCocina.length) {
+        while (i < utensiliosCocina.length) {
             alert(`
-                CICLO while: utenciliosCocina[${i}] = ${utenciliosCocina[i]}
+                CICLO while: utensiliosCocina[${i}] = ${utensiliosCocina[i]}
             `);
             i++;
         }
