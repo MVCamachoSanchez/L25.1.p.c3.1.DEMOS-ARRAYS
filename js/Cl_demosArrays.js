@@ -152,7 +152,7 @@ export default class Cl_demosArrays {
             { marca: "Valmy", color: "Azul" },
             { marca: "Revlon", color: "Vino  tinto" },
             { marca: "Masglo", color: "Blanco" },
-            { marca: "Lay Pro", color: "Tranparente" },
+            { marca: "Lay Pro", color: "Transparente" },
         ];
         alert(`
             ===> Array de objetos (pinturas de uñas):
